@@ -1,0 +1,106 @@
+/* Style global pour le header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f8f8f8;
+}
+
+/* Menu Desktop */
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: var(--fontColor);
+}
+
+/* Menu Hamburger Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.4rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Animation du hamburger pour la transformation en croix */
+.bar1 {
+  opacity: 0;
+
+}
+
+.bar2 {
+  transform: rotate(45deg) translate(6px) ;
+
+}
+
+.bar3 {
+  transform: rotate(-45deg) translate(6px) ;
+}
+
+/* Affichage mobile */
+@media (max-width: 768px) {
+  .navLinks {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: max-content;
+    width: max-content;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--background);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .open {
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Full Width pour Desktop */
+@media (min-width: 769px) {
+  .navLinks {
+    position: static;
+    transform: none;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    flex-direction: row;
+  }
+}
