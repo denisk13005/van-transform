@@ -1,18 +1,12 @@
-import localFont from "next/font/local";
+import { Sour_Gummy } from 'next/font/google';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+
+const sourGummy = Sour_Gummy({ weight: '400', subsets: ["latin"] })
+
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr" style={{ minHeight: '100dvh' }}>
-      <body className={`${geistSans.variable}`}>
+      <body className={` ${sourGummy.className}`}>
         <Header />
         <section className="main">
           {children}

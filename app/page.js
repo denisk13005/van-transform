@@ -11,12 +11,12 @@ export default function Home() {
     <>
       <main className={styles.container}>
 
+        <h1  >Transformez votre van en <br />camping-car</h1>
 
-        <div className={`${styles.imgContainer} ${sourGummy.className} `}>
-          <h1  >Transformez votre van en camping-car</h1>
-          <p>Nous offrons des services de transformation de vans en camping-cars personnalisés selon vos besoins.</p>
+        <div className={`${styles.imgContainer}`}>
         </div>
-      </main>
+        <p>Nous offrons des services de transformation de vans en camping-cars personnalisés selon vos besoins.</p>
+      </main >
     </>
   );
 }

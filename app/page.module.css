@@ -3,22 +3,41 @@
 
 .container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  border: 1px solid red;
 }
 .imgContainer{
   width: 100%;
-  height: 80dvh;
+  height: 50dvh;
   position: relative;
   z-index: 1;
   background-image: url('/traf.webp');
   background-position: center;
   background-size: 100% 100%;
   font-size: 24px;
+  margin: 2dvh 0;
 }
-.imgContainer p {
-  position: absolute;
-  font-size: 32px;
-  bottom: 0;
+.container h1 {
+  font-size: 24px;
+  text-align: center;
+  
+}
+.container p {
+  font-size: 20px;
   margin: auto;
   text-align: center;
   width: 100%;
+}
+@media screen and (min-width: 426px) {
+  .container h1 {
+    font-size: 44px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container h1 {
+    font-size: 64px;
+  }
 }

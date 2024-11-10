@@ -9,6 +9,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  height: 11dvh;
 }
 
 /* Logo */
@@ -57,19 +58,19 @@
 }
 
 .bar2 {
-  transform: rotate(45deg) translate(6px) ;
+  transform: rotate(45deg) translate(25%) ;
 
 }
 
 .bar3 {
-  transform: rotate(-45deg) translate(6px) ;
+  transform: rotate(-45deg) translate(25%) ;
 }
 
 /* Affichage mobile */
 @media (max-width: 768px) {
   .navLinks {
     position: fixed;
-    top: 60px;
+    top: 11dvh;
     right: 0;
     height: max-content;
     width: max-content;
@@ -81,7 +82,7 @@
     padding-top: 2rem;
     transform: translateY(-200%);
     transition: transform 0.3s ease-in-out;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  
   }
 
   .open {
